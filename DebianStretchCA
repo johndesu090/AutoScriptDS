@@ -4075,8 +4075,12 @@ accept = 587
 connect = 127.0.0.1:465
 
 [dropbear]
-accept = 443
+accept = 444
 connect = 127.0.0.1:442
+
+[opensshssl]
+accept = 443
+connect = 127.0.0.1:22
 
 END
 
