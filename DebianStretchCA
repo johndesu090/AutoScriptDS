@@ -4075,12 +4075,8 @@ accept = 587
 connect = 127.0.0.1:465
 
 [dropbear]
-accept = 444
-connect = 127.0.0.1:442
-
-[openssh]
 accept = 443
-connect = 127.0.0.1:22
+connect = 127.0.0.1:442
 
 END
 
@@ -4335,7 +4331,7 @@ echo "Application & Port Information"  | tee -a log-install.txt
 echo "   - OpenVPN		: TCP 465 "  | tee -a log-install.txt
 echo "   - OpenVPN-SSL	: 587 "  | tee -a log-install.txt
 echo "   - Dropbear		: 442"  | tee -a log-install.txt
-echo "   - Stunnel  	: 444"  | tee -a log-install.txt
+echo "   - Stunnel  	: 443"  | tee -a log-install.txt
 echo "   - Squid Proxy	: 3355, 8085 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Privoxy		: 3356, 8086 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - BadVPN		: 7300"  | tee -a log-install.txt
