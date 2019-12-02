@@ -29,18 +29,18 @@
 <h3 align="center">Installation (Default Version)</h3>
 
   ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DebianStretch && chmod +x DebianStretch && ./DebianStretch
+wget https://github.com/johndesu090/AutoScriptDS/raw/master/DS && chmod +x DS && ./DS
   ```
 <h3 align="center">Installation (Single Cert Version)</h3>
 
   ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DebianStretchCA && chmod +x DebianStretchCA && ./DebianStretchCA
+wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSCA && chmod +x DSCA && ./DSCA
   ```
 
 <h3 align="center">Installation (Single Cert w0pw0p)</h3>
 
   ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DebianStretchWOP && chmod +x DebianStretchWOP && ./DebianStretchWOP
+wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSWOP && chmod +x DSWOP && ./DSWOP
   ```
 
 <h3 align="center">Installation OpenVPN-Monitor</h3>
