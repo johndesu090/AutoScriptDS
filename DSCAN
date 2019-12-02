@@ -3660,8 +3660,6 @@ ca ca.crt
 cert server.crt
 key server.key
 dh dh2048.pem
-keysize 128
-tun-mtu 1532
 verify-client-cert none
 username-as-common-name
 plugin /usr/lib/openvpn/plugins/openvpn-plugin-auth-pam.so login
@@ -3679,8 +3677,8 @@ status openvpn-status.log
 log openvpn.log
 verb 3
 ncp-disable
-cipher BF-CBC
-auth SHA1
+cipher none
+auth none
 
 END
 systemctl start openvpn@server
