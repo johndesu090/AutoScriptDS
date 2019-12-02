@@ -1,4 +1,4 @@
-<h1 align="center"> Premium AutoScript Debian Stretch<img src="https://img.shields.io/badge/Version-6.0.1-blue.svg"></h1>
+<h1 align="center"> Premium AutoScript Debian Stretch<img src="https://img.shields.io/badge/Version-6.2.1-blue.svg"></h1>
 
 <p align="center">VPN AutoScript is made by FordSenpai to minimize the time consumed and user involvement in setting up your VPS</p>
 <p align="center">[Donations] GCASH: 09206200840 PAYPAL: johnford090@gmail.com FACEBOOK: John Ford Mangiliman</p>
@@ -31,11 +31,18 @@
   ```html
 wget https://github.com/johndesu090/AutoScriptDS/raw/master/DS && chmod +x DS && ./DS
   ```
-<h3 align="center">Installation (Single Cert Version)</h3>
+<h3 align="center">Installation (Single Cert Apache)</h3>
 
   ```html
 wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSCA && chmod +x DSCA && ./DSCA
   ```
+  
+<h3 align="center">Installation (Single Cert Nginx)</h3>
+
+  ```html
+wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSCAN && chmod +x DSCAN && ./DSCAN
+  ```
+
 
 <h3 align="center">Installation (Single Cert w0pw0p)</h3>
 
