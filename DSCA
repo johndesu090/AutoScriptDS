@@ -3741,6 +3741,7 @@ client
 dev tun
 proto tcp-client
 remote $MYIP 465
+lport 110
 persist-key
 persist-tun
 comp-lzo
