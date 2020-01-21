@@ -7,7 +7,7 @@ echo "deb http://build.openvpn.net/debian/openvpn/release/2.4 stretch main" > /e
 #Requirement
 apt update
 apt upgrade -y
-apt install openvpn nginx stunnel4 privoxy squid3 dropbear vnstat ufw build-essential fail2ban zip -y
+apt install openvpn nginx stunnel4 privoxy squid3 dropbear vnstat build-essential fail2ban zip -y
 
 # initializing var
 MYIP=$(wget -qO- ipv4.icanhazip.com);
@@ -4079,7 +4079,6 @@ connect = 127.0.0.1:442
 cert = /etc/stunnel/stunnel.pem
 
 [openssh]
-[dropbear]
 accept = 443
 connect = 127.0.0.1:22
 cert = /etc/stunnel/stunnel.pem
@@ -4087,11 +4086,11 @@ cert = /etc/stunnel/stunnel.pem
 END
 
 #Setting UFW
-ufw allow ssh
-ufw allow 110/tcp
-sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
-sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
-ufw enable
+#ufw allow ssh
+#ufw allow 110/tcp
+#sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
+#sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
+#ufw enable
 
 # set ipv4 forward
 echo 1 > /proc/sys/net/ipv4/ip_forward
