@@ -3706,7 +3706,6 @@ connect = 127.0.0.1:442
 cert = /etc/stunnel/stunnel.pem
 
 [openssh]
-[dropbear]
 accept = 443
 connect = 127.0.0.1:22
 cert = /etc/stunnel/stunnel.pem
