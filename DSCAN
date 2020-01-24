@@ -4159,7 +4159,6 @@ COMMIT
 -A INPUT -m string --string "get_peers" --algo kmp --to 65535 -j DROP
 -A INPUT -m string --string "announce" --algo kmp --to 65535 -j DROP
 -A INPUT -m string --string "announce_peers" --algo kmp --to 65535 -j DROP
--t nat -A POSTROUTING -o eth0 -j MASQUERADE
 -I OUTPUT -p tcp --dport 1723 -j ACCEPT
 -A OUTPUT -p tcp --dport 6881:6889 -j DROP
 -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
