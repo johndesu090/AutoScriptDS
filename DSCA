@@ -3654,7 +3654,7 @@ chmod +x /etc/openvpn/ca.crt
 tar -xzvf /root/plugin.tgz -C /usr/lib/openvpn/
 chmod +x /usr/lib/openvpn/*
 cat > /etc/openvpn/server.conf <<-END
-port 465
+port 110
 proto tcp
 dev tun
 ca ca.crt
@@ -3698,7 +3698,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3740,7 +3740,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 lport 110
 persist-key
 persist-tun
@@ -3779,7 +3779,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3822,7 +3822,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3860,7 +3860,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3905,7 +3905,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3950,7 +3950,7 @@ auth-user-pass
 client
 dev tun
 proto tcp
-remote $MYIP 465
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -3995,7 +3995,7 @@ auth-user-pass
 client
 dev tun
 proto tcp
-remote 127.0.0.1 465
+remote 127.0.0.1 110
 route $MYIP 255.255.255.255 net_gateway
 nobind
 persist-key
@@ -4052,7 +4052,7 @@ client = yes
 debug = 6
 
 [openvpn]
-accept = 127.0.0.1:465
+accept = 127.0.0.1:110
 connect = $MYIP:587
 TIMEOUTclose = 0
 verify = 0
@@ -4073,7 +4073,7 @@ client = no
 
 [openvpn]
 accept = 587
-connect = 127.0.0.1:465
+connect = 127.0.0.1:110
 
 [dropbear]
 accept = 444
@@ -4087,7 +4087,7 @@ END
 
 #Setting UFW
 ufw allow ssh
-ufw allow 465/tcp
+ufw allow 110/tcp
 sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
 sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
 
@@ -4158,7 +4158,6 @@ COMMIT
 -A INPUT -m string --string "get_peers" --algo kmp --to 65535 -j DROP
 -A INPUT -m string --string "announce" --algo kmp --to 65535 -j DROP
 -A INPUT -m string --string "announce_peers" --algo kmp --to 65535 -j DROP
--t nat -A POSTROUTING -o eth0 -j MASQUERADE
 -I OUTPUT -p tcp --dport 1723 -j ACCEPT
 -A OUTPUT -p tcp --dport 6881:6889 -j DROP
 -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
@@ -4284,7 +4283,7 @@ sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 # Configure menu
 apt-get install unzip
 cd /usr/local/bin/
-wget "https://github.com/johndesu090/AutoScriptDS/raw/master/Files/Menu/bashmenu.zip" 
+wget "https://raw.githubusercontent.com/johndesu090/AutoScriptDS/master/Files/Menu/bashmenu.zip" 
 unzip bashmenu.zip
 chmod +x /usr/local/bin/*
 
@@ -4333,7 +4332,7 @@ echo "   - Auto-Reboot : [OFF]"  | tee -a log-install.txt
 echo "   - IPv6        : [OFF]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Application & Port Information"  | tee -a log-install.txt
-echo "   - OpenVPN		: TCP 465 "  | tee -a log-install.txt
+echo "   - OpenVPN		: TCP 110 "  | tee -a log-install.txt
 echo "   - OpenVPN-SSL	: 587 "  | tee -a log-install.txt
 echo "   - Dropbear		: 442"  | tee -a log-install.txt
 echo "   - Stunnel  	: 443"  | tee -a log-install.txt
