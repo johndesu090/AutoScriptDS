@@ -423,7 +423,7 @@ END
 
 #compress configs
 cd /home/vps/public_html
-zip configs.zip sun-tuctc.ovpn fixplan.ovpn sunfreeyt.ovpn default.ovpn gtmfbig.ovpn tu200.ovpn noload.ovpn
+zip configs.zip sun-tuctc.ovpn fixplan.ovpn sunfreeyt.ovpn default.ovpn gtmfbig.ovpn tu200.ovpn noload.ovpn gtmsns.ovpn
 
 #clearing history
 history -c
