@@ -55,6 +55,51 @@ echo '<ca>' >> /home/vps/public_html/sun-tuctc.ovpn
 cat /etc/openvpn/ca.crt >> /home/vps/public_html/sun-tuctc.ovpn
 echo '</ca>' >> /home/vps/public_html/sun-tuctc.ovpn
 
+cat > /home/vps/public_html/gtmsns.ovpn <<-END
+# JohnFordTV's VPN Premium Script
+# © Github.com/johndesu090
+# Official Repository: https://github.com/johndesu090/AutoScriptDS
+# For Updates, Suggestions, and Bug Reports, Join to my Messenger Groupchat(VPS Owners): https://m.me/join/AbbHxIHfrY9SmoBO
+# For Donations, Im accepting prepaid loads or GCash transactions:
+# Smart: 09206200840
+# Facebook: https://fb.me/johndesu090
+# Thanks for using this script, Enjoy Highspeed OpenVPN Service
+auth-user-pass
+client
+dev tun
+proto tcp-client
+remote 43.243.127.246 110
+nobind
+persist-key
+persist-tun
+comp-lzo
+keepalive 10 120
+tls-client
+remote-cert-tls server
+verb 3
+auth-user-pass
+cipher none
+auth none
+auth-nocache
+auth-retry interact
+connect-retry 0 1
+nice -20
+reneg-sec 0
+redirect-gateway def1
+dhcp-option DNS 1.1.1.1
+dhcp-option DNS 1.0.0.1
+http-proxy 43.243.127.246 3356
+http-proxy-option CUSTOM-HEADER CONNECT HTTP/1.0
+http-proxy-option CUSTOM-HEADER Host shopee.ph
+http-proxy-option CUSTOM-HEADER X-Online-Host shopee.ph
+http-proxy-option CUSTOM-HEADER X-Forward-Host shopee.ph
+http-proxy-option CUSTOM-HEADER Connection Keep-Alive
+
+END
+echo '<ca>' >> /home/vps/public_html/gtmsns.ovpn
+cat /etc/openvpn/ca.crt >> /home/vps/public_html/gtmsns.ovpn
+echo '</ca>' >> /home/vps/public_html/gtmsns.ovpn
+
 cat > /home/vps/public_html/noload.ovpn <<-END
 # JohnFordTV's VPN Premium Script
 # © Github.com/johndesu090
