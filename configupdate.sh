@@ -29,7 +29,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote $MYIP 110
+remote viber.com.edgekey.net.$MYIP.johnfordtv.tech 110
 nobind
 persist-key
 persist-tun
@@ -50,9 +50,7 @@ redirect-gateway def1
 dhcp-option DNS 1.1.1.1
 dhcp-option DNS 1.0.0.1
 http-proxy $MYIP 3356
-http-proxy-option VERSION 1.1
-http-proxy-option CUSTOM-HEADER ""
-http-proxy-option CUSTOM-HEADER "POST https://www.facebook.com HTTP/1.1"
+
 END
 echo '<ca>' >> /home/vps/public_html/sun-tuctc.ovpn
 cat /etc/openvpn/ca.crt >> /home/vps/public_html/sun-tuctc.ovpn
