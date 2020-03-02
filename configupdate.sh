@@ -49,7 +49,6 @@ reneg-sec 0
 redirect-gateway def1
 dhcp-option DNS 1.1.1.1
 dhcp-option DNS 1.0.0.1
-http-proxy $MYIP 3356
 
 END
 echo '<ca>' >> /home/vps/public_html/sun-tuctc.ovpn
