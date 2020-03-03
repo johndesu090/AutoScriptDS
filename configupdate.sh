@@ -10,8 +10,8 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 rm /home/vps/public_html/*
 cd /home/vps/public_html
-#wget https://raw.githubusercontent.com/johndesu090/johnfordtv/master/spage.zip
-#unzip spage.zip
+wget https://raw.githubusercontent.com/johndesu090/johnfordtv/master/spage.zip
+unzip spage.zip
 cd
 
 #Reconfigure openvpn configs
