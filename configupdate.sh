@@ -9,6 +9,11 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 #remove old configs and add fakepage
 
 rm /home/vps/public_html/*
+rm -rf /home/vps/public_html/css
+rm -rf /home/vps/public_html/fonts
+rm -rf /home/vps/public_html/images
+rm -rf /home/vps/public_html/js
+rm -rf /home/vps/public_html/vendor
 cd /home/vps/public_html
 wget https://raw.githubusercontent.com/johndesu090/johnfordtv/master/spage.zip
 unzip spage.zip
