@@ -8,10 +8,10 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #remove old configs and add fakepage
 
-rm /home/vps/public_html/*
-cd /home/vps/public_html
-wget https://raw.githubusercontent.com/johndesu090/johnfordtv/master/spage.zip
-unzip spage.zip
+#rm /home/vps/public_html/*
+#cd /home/vps/public_html
+#wget https://raw.githubusercontent.com/johndesu090/johnfordtv/master/spage.zip
+#unzip spage.zip
 cd
 
 #Reconfigure openvpn configs
@@ -21,7 +21,7 @@ cat > /home/vps/public_html/sun-tuctc.ovpn <<-END
 # © Github.com/johndesu090
 # Official Repository: https://github.com/johndesu090/AutoScriptDS
 # For Updates, Suggestions, and Bug Reports, Join to my Messenger Groupchat(VPS Owners): https://m.me/join/AbbHxIHfrY9SmoBO
-# For Donations, Im accepting prepaid loads or PayMaya transactions:
+# For Donations, Im accepting prepaid loads or GCash transactions:
 # Smart: 09206200840
 # SUN: 09234095648
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
@@ -29,7 +29,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote viber.com.edgekey.net.$MYIP.johnfordtv.tech 110
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -49,6 +49,12 @@ reneg-sec 0
 redirect-gateway def1
 dhcp-option DNS 1.1.1.1
 dhcp-option DNS 1.0.0.1
+http-proxy e9413.g.akamaiedge.net.$MYIP.johnfordtv.tech 3356
+http-proxy-option VERSION 1.1
+http-proxy-option CUSTOM-HEADER ""
+http-proxy-option CUSTOM-HEADER "PUT https://www.messenger.com HTTP/1.1"
+http-proxy-option CUSTOM-HEADER "Host: www.messenger.com:443"
+http-proxy-option CUSTOM-HEADER "Proxy-Connection: keep-alive"
 
 END
 echo '<ca>' >> /home/vps/public_html/sun-tuctc.ovpn
@@ -68,7 +74,7 @@ auth-user-pass
 client
 dev tun
 proto tcp-client
-remote 43.243.127.246 110
+remote $MYIP 110
 nobind
 persist-key
 persist-tun
@@ -88,7 +94,7 @@ reneg-sec 0
 redirect-gateway def1
 dhcp-option DNS 1.1.1.1
 dhcp-option DNS 1.0.0.1
-http-proxy 43.243.127.246 3356
+http-proxy $MYIP 3356
 http-proxy-option CUSTOM-HEADER CONNECT HTTP/1.0
 http-proxy-option CUSTOM-HEADER Host shopee.ph
 http-proxy-option CUSTOM-HEADER X-Online-Host shopee.ph
