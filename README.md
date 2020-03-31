@@ -37,6 +37,12 @@ wget https://github.com/johndesu090/AutoScriptDS/raw/master/configupdate.sh && c
 wget https://github.com/johndesu090/AutoScriptDS/raw/master/DS && chmod +x DS && ./DS
   ```
   
+<h3 align="center">Installation (Experimental)</h3>
+
+  ```html
+wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSE && chmod +x DSE && ./DSE
+  ```
+  
 <h3 align="center">Installation (Single Cert Apache)</h3>
 
   ```html
