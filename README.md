@@ -26,47 +26,11 @@
   <a><img src="https://img.shields.io/badge/Commands-menu-yellow.svg"></a>
  </p>
 
-<h3 align="center">OpenVPN Configs Updater</h3>
 
   ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/configupdate.sh && chmod +x configupdate.sh && ./configupdate.sh
-  ```
-<h3 align="center">Installation (Default)</h3>
-
-  ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DS && chmod +x DS && ./DS
-  ```
-  
-<h3 align="center">Installation (Experimental)</h3>
-
-  ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSE && chmod +x DSE && ./DSE
-  ```
-  
-<h3 align="center">Installation (Single Cert Apache)</h3>
-
-  ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSCA && chmod +x DSCA && ./DSCA
-  ```
-  
-<h3 align="center">Installation (Single Cert Nginx)</h3>
-
-  ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSCAN && chmod +x DSCAN && ./DSCAN
+SCRIPT USAGE CLOSED BY THE DEVELOPER
   ```
 
-
-<h3 align="center">Installation (Single Cert w0pw0p)</h3>
-
-  ```html
-wget https://github.com/johndesu090/AutoScriptDS/raw/master/DSWOP && chmod +x DSWOP && ./DSWOP
-  ```
-
-<h3 align="center">Installation OpenVPN-Monitor</h3>
-
-  ```html
-wget https://raw.githubusercontent.com/johndesu090/AutoScriptDS/master/Files/Plugins/ovpnmonitor.sh && chmod +x ovpnmonitor.sh && ./ovpnmonitor.sh
-  ```
 
 
 <h3 align="center">Additional Info</h3>
